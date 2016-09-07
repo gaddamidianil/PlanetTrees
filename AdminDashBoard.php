@@ -25,7 +25,7 @@ if(!isset($_SESSION['username'])){
       <link rel="stylesheet" type="text/css" href="style/style.css" />
       <script type="text/javascript" src="scripts/jquery.min.js"> </script>  
       <script> <?php 
-  		echo "var uid = " . $uid . ";\n";
+  		echo "var uid = " . $uid . ";\n";   //sending to AdminPage.js to update profile details to use in where condition.
   		?></script>
       <script type="text/javascript" src="scripts/AdminPage.js"></script>
 </head>

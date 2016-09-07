@@ -7,6 +7,7 @@ session_start();
 <head>
   <title>Planet Trees</title>
   <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <script type="text/javascript" src="scripts/jquery.min.js"> </script>  
 </head>
 
 <body>
@@ -29,9 +30,14 @@ If the Volunteer is successful in acquiring substantial number of tree plantings
 Volunteering with TreePeople is fun and rewarding. It’s also unlike typical volunteer experiences in that we empower YOU with the support, training and tools you need to be an engine of change.
 
 If you’re not already registered to be a volunteer, sign up now. Once you have a username and password, you can browse through our calendar to sign up for an event.</p>
-        
+        <div id="cmngsoon">
         <h2>Coming more data soon...</h2>
-        
+        </div>
+        <script>
+			$(function() {
+				$("#cmngsoon").hide(300).show(1000).hide(300).show(1000).hide(300).show(1000).hide(300).show(1000).hide(300).show(1000);
+				});
+        </script>
       </div>
     </div>
     <div id="content_footer"></div>

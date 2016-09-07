@@ -55,14 +55,16 @@ return true;
 //Jquery function to check the user availability in database while registering
 
 $(document).ready(function() {
-	$('checkuname').load('checkuname.php').show();
+//	$('checkuname').load('checkuname.php').show();
 	
 	$('#username').keyup(function() {
-	//	$('#checkuname').append('checking'); -- tested
+
 	$.post('checkuser.php', { username: register_form.username.value },
 	function(result){
-		$('#checkuname').html(result).show();
-		});
+		$('#checkuname').html(result).show(); //#checkuname is the id value of <span> in register.php for error display
+	//show() method shows the hidden, selected elements.	
+		//jquery html() is similar to innerHTML
+	});
 	});
 });
 

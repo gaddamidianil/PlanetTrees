@@ -1,4 +1,5 @@
 <?php 
+#After user logged in, based on role pagre redirected.
 session_start();
 if(isset($_SESSION['id']) && $_SESSION['UserRole'] != "Admin"){
 	header("Location: UserDashBoard.php");

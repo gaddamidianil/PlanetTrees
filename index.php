@@ -9,6 +9,7 @@ session_start();
   <meta name="description" content="CIS5690 - Advances systems Project" />
   <meta name="keywords" content="cis5690,palnts,donate,trees,ucmo,cis" />
     <link rel="stylesheet" type="text/css" href="style/style.css" />
+      <script type="text/javascript" src="scripts/jquery.min.js"> </script>  
 </head>
 
 <body>
@@ -26,8 +27,14 @@ session_start();
 works with municipal governments, state agencies and, in some cases, private land owners to place
 trees. All trees are funded through donations and are planted by volunteers</p>
        
-        <h2>Learn About more PlantTree <a href="AboutPlanetTree.php">..more</a>.</h2>
-      
+        <h2 id="cmngsoon1">Learn About more PlantTree <a href="AboutPlanetTree.php">..more</a>.</h2>
+      	        <script>
+			$(function() {
+
+		//		$("#cmngsoon1").hide(300).show(1000).hide(300).show(1000).hide(300).show(1000).hide(300).show(1000).hide(300).show(1000);
+				$("#cmngsoon1").fadeOut(1000).delay(1000).fadeIn(1000);	
+				});
+        </script>
       <h1>   Our Mission </h1>
 
  		<p>Trees for the Future is dedicated to improving the livelihoods of impoverished farmers

@@ -73,7 +73,7 @@ $user_result = mysqli_query($conn, $user_query);
 	
 	echo '<td>' . $row['UserRole'] . '</td>';
 ?>
-	 <td><a href="<?php echo $row['UserID']; ?>" class="ulink" onclick="return confirm('Are You sure?')">Delete</a></td>
+	 <td><a href="<?php echo $row['UserID']; ?>" class="ulink" onclick="if(!confirm('Are You sure?')) return false">Delete</a></td>
 	</tr>
 <?php }?>
 </table>

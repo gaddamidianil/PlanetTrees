@@ -2,12 +2,12 @@
 
 $(function(){
   	
-	var path = window.location.pathname;
-	var page = path.split("/").pop();
+	var path = window.location.pathname; //current page path.
+	var page = path.split("/").pop();  // slipts by '/' and removes last element to get page name.
 	
     switch (page){
     case 'AdminDashBoard.php':
-    	$('#ajx_dash').addClass('sel');
+    	$('#ajx_dash').addClass('sel'); //sel is the css attribute to tabs highlight color.
     	break;
     case 'adminprofile.php':
     	$('#ajx_edit').addClass('sel');
@@ -34,7 +34,7 @@ $(document).ready(function(){
 		var savebtn = $(this).next(".savebtn");
 		var theid   = dataset.attr("id");
 		var newid   = theid+"-form";
-		var currval = dataset.text();
+		var currval = dataset.text(); //previous value or record
 		dataset.empty();
 		
 		$('<input type="text" name="'+newid+'" id="'+newid+'" value="'+currval+'" class="hlite">').appendTo(dataset);
@@ -51,9 +51,9 @@ $(document).ready(function(){
 		var newid   = dataset.attr("id");
 		
 		
-		var cinput  = "#"+newid+"-form";
+		var cinput  = "#"+newid+"-form";  //new id for input box
 		var einput  = $(cinput);
-		var newval  = einput.val();
+		var newval  = einput.val(); // getting new value from input box
 		console.log(newid);
 		
 		if(newid == "Email"){
@@ -71,7 +71,7 @@ $(document).ready(function(){
 		}
 		
 		$(this).css("display", "none");
-		einput.remove();
+		einput.remove(); //removes the input text box field
 		$.ajax({
 			url: "scripts/update_account.php",
 			type: "POST",
@@ -192,8 +192,10 @@ $(document).ready(function() {
 		type: "POST",
 		data: {'name':ename,'date':edate,'time': etime,'location':elocation,'desc':edesc,'lead':elead,'leadname':eleadname},
 		success:function(json){
+			console.log(json)
 			$.each(json,function(i,item){
 				if(item == "successful"){
+					console.log(item);
 					$('#eventstatus').text("New event Succssfully created and Uniq Trees are allocated; Lead Volunteer is : "+eleadname);
 					$('#neweventform').find('input:text').val(''); 
 				}else{

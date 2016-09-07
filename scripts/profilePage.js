@@ -26,12 +26,14 @@ $(document).ready(function(){
 		var theid   = dataset.attr("id");
 		var newid   = theid+"-form";
 		var currval = dataset.text();
-		dataset.empty();
+		dataset.empty();   //removing previous data 
 		
+//creating new input box for new value		
+		//+currval to display previous entry
 		$('<input type="text" name="'+newid+'" id="'+newid+'" value="'+currval+'" class="hlite">').appendTo(dataset);
 		
-		$(this).css("display", "none");
-		savebtn.css("display", "block");
+		$(this).css("display", "none");  //hides edit link
+		savebtn.css("display", "block"); //save button display
 	});
 	$(".savebtn").on("click", function(e){
 		e.preventDefault();
@@ -93,7 +95,7 @@ $(document).ready(function(){
 	   var cline = $(this).parent().prev('.hidden');
 	   var ctd = $(this).parent();
 	   var eventID = cline.text();
-	   console.log(ctd);
+	 
 		$.ajax({
 			url: "scripts/evt_enroll.php",
 			type: "POST",
@@ -123,7 +125,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 	$("#req-button").on("click", function(e){
-	e.preventDefault();
+	e.preventDefault(); //prevents default click in ajax call.
 	var req_status = $('#req-status');
 	req_status.html("");
 	var loc = $('#req-location').val();
@@ -180,7 +182,7 @@ $(document).ready(function(){
 			}) // loop
 										
 		},
-		  error: function(xhr,desc,err){
+		  error: function(xhr,desc,err){  //ajax call error.
 			  console.log("failed with error : " + xhr + "\n"+err);
 		  }
 		

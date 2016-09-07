@@ -294,8 +294,9 @@ you can take pride in helping to transform our urban landscapes.
 	  </fieldset>
 	  <button id="req-button" class="anil-button anil-button-primary"> Submit Request </button>
 	  </form>
+	  <h3 id="reqcode"> </h3>
       </section>
-       <h3 id="reqcode"> </h3>
+       
         </div>
         <!-- End of the page content -->
          

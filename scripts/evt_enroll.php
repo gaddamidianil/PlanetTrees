@@ -20,7 +20,7 @@ if ($count == 0) {
 	echo "Registered";
 }
 
-
+// validating data for sql injections. removes any spaces, stripslashes // before inserting data into database.
 function test_input($data) {
 	$data = trim($data);
 	$data = stripslashes($data);

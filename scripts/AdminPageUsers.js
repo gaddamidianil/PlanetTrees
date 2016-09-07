@@ -8,8 +8,10 @@ $(document).ready(function(){
 			data: {'uid': uid },
 			success:function(data){
 				if(data == "successful"){
-					location.reload();
-					$('#dbresult').text("User Delete Succssfully");
+				
+					$('#dbresult').text("User Deleted Succssfully, Pls wait refershing data");
+					setTimeout(location.reload.bind(location), 10000);
+
 					
 				}else{
 					$('#dbresult').text("DB Error. Pls contact site admin");

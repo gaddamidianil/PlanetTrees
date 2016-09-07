@@ -53,6 +53,7 @@ mysqli_close($conn);
         <h1>Join Planet Trees</h1>
         <p>By Joining the Planet Tree Organization, you can participate in various events like planting trees, environmental awareness programs, nature protection and so on. </p>
          <?php
+         #If the user is logged in, register page will be disabled.
   if(isset($_SESSION['username'])){
   	echo "<span style=color:blue>".$_SESSION['username']." - Currenltly logged in. Please log off to access registration</span>";
   	echo "

@@ -27,12 +27,13 @@ $("#searchtree").click(function(e){
 		success:function(htmlresult){
 			console.log(htmlresult);
 			$('#searchResult').html(htmlresult);
-			 if($(this).hasClass('selected')) {
+			deselect($(this));  
+			 /**if($(this).hasClass('selected')) {
 			      deselect($(this));               
 			    } else {
 			      $(this).addClass('selected');
 			      $('.pop').slideToggle();
-			    }
+			    }**/
 											
 		},
 		error: function(xhr,desc,err){
